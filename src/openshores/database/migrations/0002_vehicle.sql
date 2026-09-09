@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS "a_Vehicle" (
+    "id"                             BIGINT PRIMARY KEY,
+    "idp"                            BIGINT NOT NULL,
+    "locX"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "locY"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "locZ"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "rotX"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "rotY"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "rotZ"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "timeCreate"                     BIGINT NOT NULL,
+    "timeModified"                   BIGINT NOT NULL,
+    "timeTick"                       BIGINT,
+    "timeTock"                       BIGINT,
+    "timeDeath"                      BIGINT,
+    "name"                           TEXT NOT NULL DEFAULT '',
+    "allegiance"                     BIGINT NOT NULL DEFAULT 0,
+    "arenaTeam"                      INTEGER NOT NULL DEFAULT 0,
+    "conditions"                     BYTEA,
+    "damageHistory"                  BYTEA,
+    "cid"                            BIGINT NOT NULL,
+    "actBits"                        INTEGER NOT NULL DEFAULT 0,
+    "atRest"                         INTEGER NOT NULL DEFAULT 0,
+    "vecX"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "vecY"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "vecZ"                           DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "throttle"                       INTEGER NOT NULL DEFAULT 0,
+    "throttleLateral"                INTEGER NOT NULL DEFAULT 0,
+    "throttleLong"                   INTEGER NOT NULL DEFAULT 0,
+    "throttleVertical"               INTEGER NOT NULL DEFAULT 0,
+    "switches"                       INTEGER NOT NULL DEFAULT 0,
+    "fuel"                           INTEGER NOT NULL DEFAULT 0,
+    "hp"                             INTEGER NOT NULL,
+    "qual"                           INTEGER NOT NULL DEFAULT 1,
+    "ord"                            BYTEA,
+    "motherShip"                     BIGINT NOT NULL DEFAULT 0,
+    "motherShipName"                 TEXT NOT NULL DEFAULT ''
+);
+
+CREATE INDEX IF NOT EXISTS "ix_a_Vehicle_idp"        ON "a_Vehicle" ("idp");
+CREATE INDEX IF NOT EXISTS "ix_a_Vehicle_cid"        ON "a_Vehicle" ("cid");
+CREATE INDEX IF NOT EXISTS "ix_a_Vehicle_motherShip" ON "a_Vehicle" ("motherShip");

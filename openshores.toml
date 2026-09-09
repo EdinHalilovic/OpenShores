@@ -1,0 +1,43 @@
+[deployment]
+database_url = "postgresql://username:password@localhost/databasename"
+public_host = "127.0.0.1"
+bind_host = "0.0.0.0"
+
+login_port = 16757
+chat_port = 16758
+scene_port = 16759
+mail_port = 16760
+control_port = 16761
+
+# DEBUG, INFO, WARNING, ERROR.
+log_level = "INFO"
+
+# Written next to the server. Empty turns the file log off.
+log_file = "server_console.log"
+
+# Where the web front end looks for the process. Empty turns it off.
+pid_file = "server.pid"
+
+# Where the city report writes its HTML.
+report_dir = "city_reports"
+
+# Chat history for the web panel.
+chat_log = false
+chat_log_channels = "Galactic"
+chat_log_keep = 200
+
+metrics_port = 0
+
+# Debugging only.
+scene_probe = "none"
+show_acks = false
+
+
+[gameplay]
+# Galaxy_seed is used on first run
+galaxy_seed = 0
+
+# To be implemented
+# city_cycle_seconds = 771.4285714285714
+# corpse_linger_seconds = 2.0
+# hot_state_flush_seconds = 5.0

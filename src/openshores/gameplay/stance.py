@@ -1,0 +1,16 @@
+
+from __future__ import annotations
+
+
+STANCE_FRIEND = 0
+STANCE_NEUTRAL = 1
+STANCE_ENEMY = 2
+STANCE_EMPIRE = 3
+STANCE_ALLY = 4
+STANCE_VASSAL = 5
+
+STANCE_NAMES = {
+    STANCE_FRIEND: "Friend", STANCE_NEUTRAL: "Neutral",
+    STANCE_ENEMY: "Enemy", STANCE_EMPIRE: "Empire",
+    STANCE_ALLY: "Ally", STANCE_VASSAL: "Vassal",
+}

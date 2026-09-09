@@ -1,0 +1,1 @@
+ALTER TABLE "g_Empire" ADD COLUMN IF NOT EXISTS "founder_domain" INTEGER DEFAULT 2;
